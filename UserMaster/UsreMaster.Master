@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UsreMaster.master.cs" Inherits="AutomatedOrphanageHomeManagementSystem.UserMaster.UsreMaster" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>Usre Master</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Orphanage " />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+<!-- gallery -->
+<link rel="stylesheet" href="css/lightGallery.css" type="text/css" media="all" />
+<!-- //gallery -->
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!-- //font-awesome-icons -->
+<link href="//fonts.googleapis.com/css?family=Gentium+Basic:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet"/>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'/>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+          <div class="banner">
+		<div class="container">
+			<div class="w3_agile_header">	
+				<div class="w3_agile_header_left">
+					<h2>Call us for help <span>+(91) 9696858596</span></h2>
+				</div>
+				<div class="agile_logo">
+					<h1><a href="Home.aspx"><span>Orphanage</span> Home</a></h1>
+				</div>
+				<div class="agileits_w3layouts_mail">
+					<p><i class="fa fa-envelope" aria-hidden="true"></i> <a href="#">orphanageservice123@gmail.com</a></p>
+				</div>
+				<div class="clearfix"> </div>
+				<div class="w3_agileits_nav">	
+					<nav class="wthree_nav_menu">
+						<ul>
+							<li><a href="#" class="icon icon-menu" id="btn-menu">Menu</a></li>
+						</ul>
+					</nav>
+					<div id="sideNav">
+						<ul>
+							<li><a href="UserHome.aspx" class="w3_home"><span>Home</span></a></li>
+							<li><a href="ChildRegister.aspx" ><span>Child Register</span></a></li>
+							<li><a href="WholeInformation.aspx" ><span>Whole Info</span></a></li>
+							
+							<li><a href="Staff.aspx"><span>Staff</span></a></li>
+							<li><a href="Camp.aspx" ><span>Camp</span></a></li>
+					
+							<li><a href="Sponser.aspx" ><span>Sponser</span></a></li>
+							<li><a href="../MainMaster/Home.aspx" ><span>Logout</span></a></li>
+			
+
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="agileinfo_banner_info">
+				<h3><span>we rise by</span> lifting others</h3>
+			</div>
+			<div class="agileits_grids_format">
+				<div class="agileits_grid_format">
+					<ul>
+						<li class="active">Sponsor a child.</li>
+						<li> While a few dollars a month may not seem to make </li>
+						<li>a real difference</li>
+					</ul>
+				</div>
+				<div class="agileits_grid_format">
+					<ul>
+						<li>Adopt a Child</li>
+						<li>Consider adopting a child</li>
+						<li>Read about how to adopt</li>
+					</ul>
+				</div>
+				<div class="agileits_grid_format">
+					<ul>
+						<li> Donate Money</li>
+						<li>Voluntee</li>
+					</ul>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+            <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            </div>
+<div class="footer">
+		<div class="container">
+			<ul class="social">
+				<li><a class="social-facebook" href="#">
+						<i class="fa fa-facebook" aria-hidden="true"></i>
+						<div class="tooltip"><span>Facebook</span></div>
+					</a>
+				</li>
+				<li><a class="social-twitter" href="#">
+					<i class="fa fa-twitter" aria-hidden="true"></i>
+					<div class="tooltip"><span>Twitter</span></div>
+					</a></li>
+				<li><a class="social-google" href="#">
+					<i class="fa fa-google-plus" aria-hidden="true"></i>
+					<div class="tooltip"><span>Google+</span></div>
+					</a></li>
+				<li><a class="social-pinterest" href="#">
+					<i class="fa fa-pinterest-p" aria-hidden="true"></i>
+					<div class="tooltip"><span>Pinterest</span></div>
+					</a></li>
+				<li><a class="social-instagram" href="#">
+					<i class="fa fa-instagram" aria-hidden="true"></i>
+					<div class="tooltip"><span>Instagram</span></div>
+					</a></li>
+			</ul>
+			<ul class="main-nav">
+				<li><a href="#">Home</a><i>|</i></li>
+				<li><a href="#" class="scroll">About Us</a><i>|</i></li>
+				<li><a href="#" class="scroll">Gallery</a><i>|</i></li>
+				<li><a href="#" class="scroll">Services</a><i>|</i></li>
+				<li><a href="#" class="scroll">Mail Us</a></li>
+			</ul>
+			<div class="copy-right">
+				<p>© 2022 Orphanage Home. All rights reserved | Developed  by <a href="#">Swarupa Gaikar</a></p>
+			</div>
+		</div>
+	</div>
+<!-- //footer --> 
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+	jQuery(document).ready(function($) {
+		$(".scroll").click(function(event){		
+			event.preventDefault();
+			$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+		});
+	});
+</script>
+<!-- start-smoth-scrolling -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<!-- //for bootstrap working -->
+<!-- menu-plugin -->
+<script type="text/javascript" src="js/gnmenu.js"></script>	
+<!-- //menu-plugin -->
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+						
+			$().UItoTop({ easingType: 'easeOutQuart' });
+								
+			});
+    </script>
+
+        </div>
+    </form>
+</body>
+</html>

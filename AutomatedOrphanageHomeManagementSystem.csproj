@@ -1,0 +1,486 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C43DC780-2BDC-49FA-B9ED-A122D6DDF4C9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AutomatedOrphanageHomeManagementSystem</RootNamespace>
+    <AssemblyName>AutomatedOrphanageHomeManagementSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44370</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AdminPanel\css\bootstrap.css" />
+    <Content Include="AdminPanel\css\flexslider.css" />
+    <Content Include="AdminPanel\css\font-awesome.css" />
+    <Content Include="AdminPanel\css\lightGallery.css" />
+    <Content Include="AdminPanel\css\style.css" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont.svg" />
+    <Content Include="AdminPanel\images\1.jpg" />
+    <Content Include="AdminPanel\images\1.png" />
+    <Content Include="AdminPanel\images\10.jpg" />
+    <Content Include="AdminPanel\images\11.jpg" />
+    <Content Include="AdminPanel\images\12.jpg" />
+    <Content Include="AdminPanel\images\2.jpg" />
+    <Content Include="AdminPanel\images\2.png" />
+    <Content Include="AdminPanel\images\3.jpg" />
+    <Content Include="AdminPanel\images\3.png" />
+    <Content Include="AdminPanel\images\4.jpg" />
+    <Content Include="AdminPanel\images\4.png" />
+    <Content Include="AdminPanel\images\5.jpg" />
+    <Content Include="AdminPanel\images\5.png" />
+    <Content Include="AdminPanel\images\6.jpg" />
+    <Content Include="AdminPanel\images\6.png" />
+    <Content Include="AdminPanel\images\7.jpg" />
+    <Content Include="AdminPanel\images\7.png" />
+    <Content Include="AdminPanel\images\8.jpg" />
+    <Content Include="AdminPanel\images\8.png" />
+    <Content Include="AdminPanel\images\9.jpg" />
+    <Content Include="AdminPanel\images\arrow.png" />
+    <Content Include="AdminPanel\images\banner.jpg" />
+    <Content Include="AdminPanel\js\bars.js" />
+    <Content Include="AdminPanel\js\bootstrap.min.js" />
+    <Content Include="AdminPanel\js\counterup.min.js" />
+    <Content Include="AdminPanel\js\easing.js" />
+    <Content Include="AdminPanel\js\gnmenu.js" />
+    <Content Include="AdminPanel\js\index.js" />
+    <Content Include="AdminPanel\js\jquery-2.1.4.min.js" />
+    <Content Include="AdminPanel\js\jquery.film_roll.js" />
+    <Content Include="AdminPanel\js\jquery.flexisel.js" />
+    <Content Include="AdminPanel\js\jquery.flexslider.js" />
+    <Content Include="AdminPanel\js\lightGallery.js" />
+    <Content Include="AdminPanel\js\move-top.js" />
+    <Content Include="AdminPanel\js\waypoints.min.js" />
+    <Content Include="AdminPanel\Home.aspx" />
+    <Content Include="AdminPanel\UserData.aspx" />
+    <Content Include="AdminPanel\AddWhole.aspx" />
+    <Content Include="AdminPanel\AddCamp.aspx" />
+    <Content Include="AdminPanel\Feedback.aspx" />
+    <Content Include="AdminPanel\AddStaff.aspx" />
+    <Content Include="AdminPanel\SponserData.aspx" />
+    <Content Include="AdminPanel\OrphaneChild.aspx" />
+    <Content Include="DataBase\OrphanageDataBase.mdf" />
+    <Content Include="DataBase\OrphanageDataBase_log.ldf">
+      <DependentUpon>OrphanageDataBase.mdf</DependentUpon>
+    </Content>
+    <Content Include="Global.asax" />
+    <Content Include="MainMaster\css\bootstrap.css" />
+    <Content Include="MainMaster\css\flexslider.css" />
+    <Content Include="MainMaster\css\font-awesome.css" />
+    <Content Include="MainMaster\css\lightGallery.css" />
+    <Content Include="MainMaster\css\style.css" />
+    <Content Include="MainMaster\fonts\fontawesome-webfont.svg" />
+    <Content Include="MainMaster\images\1.jpg" />
+    <Content Include="MainMaster\images\1.png" />
+    <Content Include="MainMaster\images\10.jpg" />
+    <Content Include="MainMaster\images\11.jpg" />
+    <Content Include="MainMaster\images\12.jpg" />
+    <Content Include="MainMaster\images\2.jpg" />
+    <Content Include="MainMaster\images\2.png" />
+    <Content Include="MainMaster\images\3.jpg" />
+    <Content Include="MainMaster\images\3.png" />
+    <Content Include="MainMaster\images\4.jpg" />
+    <Content Include="MainMaster\images\4.png" />
+    <Content Include="MainMaster\images\5.jpg" />
+    <Content Include="MainMaster\images\5.png" />
+    <Content Include="MainMaster\images\6.jpg" />
+    <Content Include="MainMaster\images\6.png" />
+    <Content Include="MainMaster\images\7.jpg" />
+    <Content Include="MainMaster\images\7.png" />
+    <Content Include="MainMaster\images\8.jpg" />
+    <Content Include="MainMaster\images\8.png" />
+    <Content Include="MainMaster\images\9.jpg" />
+    <Content Include="MainMaster\images\arrow.png" />
+    <Content Include="MainMaster\images\banner.jpg" />
+    <Content Include="MainMaster\js\bars.js" />
+    <Content Include="MainMaster\js\bootstrap.min.js" />
+    <Content Include="MainMaster\js\counterup.min.js" />
+    <Content Include="MainMaster\js\easing.js" />
+    <Content Include="MainMaster\js\gnmenu.js" />
+    <Content Include="MainMaster\js\index.js" />
+    <Content Include="MainMaster\js\jquery-2.1.4.min.js" />
+    <Content Include="MainMaster\js\jquery.film_roll.js" />
+    <Content Include="MainMaster\js\jquery.flexisel.js" />
+    <Content Include="MainMaster\js\jquery.flexslider.js" />
+    <Content Include="MainMaster\js\lightGallery.js" />
+    <Content Include="MainMaster\js\move-top.js" />
+    <Content Include="MainMaster\js\waypoints.min.js" />
+    <Content Include="MainMaster\Home.aspx" />
+    <Content Include="MainMaster\About.aspx" />
+    <Content Include="MainMaster\Services.aspx" />
+    <Content Include="MainMaster\Gallery.aspx" />
+    <Content Include="MainMaster\Event.aspx" />
+    <Content Include="MainMaster\Contact.aspx" />
+    <Content Include="MainMaster\Registration.aspx" />
+    <Content Include="MainMaster\Login.aspx" />
+    <Content Include="UserMaster\css\bootstrap.css" />
+    <Content Include="UserMaster\css\flexslider.css" />
+    <Content Include="UserMaster\css\font-awesome.css" />
+    <Content Include="UserMaster\css\lightGallery.css" />
+    <Content Include="UserMaster\css\style.css" />
+    <Content Include="UserMaster\fonts\fontawesome-webfont.svg" />
+    <Content Include="UserMaster\images\1.jpg" />
+    <Content Include="UserMaster\images\1.png" />
+    <Content Include="UserMaster\images\10.jpg" />
+    <Content Include="UserMaster\images\11.jpg" />
+    <Content Include="UserMaster\images\12.jpg" />
+    <Content Include="UserMaster\images\2.jpg" />
+    <Content Include="UserMaster\images\2.png" />
+    <Content Include="UserMaster\images\3.jpg" />
+    <Content Include="UserMaster\images\3.png" />
+    <Content Include="UserMaster\images\4.jpg" />
+    <Content Include="UserMaster\images\4.png" />
+    <Content Include="UserMaster\images\5.jpg" />
+    <Content Include="UserMaster\images\5.png" />
+    <Content Include="UserMaster\images\6.jpg" />
+    <Content Include="UserMaster\images\6.png" />
+    <Content Include="UserMaster\images\7.jpg" />
+    <Content Include="UserMaster\images\7.png" />
+    <Content Include="UserMaster\images\8.jpg" />
+    <Content Include="UserMaster\images\8.png" />
+    <Content Include="UserMaster\images\9.jpg" />
+    <Content Include="UserMaster\images\arrow.png" />
+    <Content Include="UserMaster\images\banner.jpg" />
+    <Content Include="UserMaster\js\bars.js" />
+    <Content Include="UserMaster\js\bootstrap.min.js" />
+    <Content Include="UserMaster\js\counterup.min.js" />
+    <Content Include="UserMaster\js\easing.js" />
+    <Content Include="UserMaster\js\gnmenu.js" />
+    <Content Include="UserMaster\js\index.js" />
+    <Content Include="UserMaster\js\jquery-2.1.4.min.js" />
+    <Content Include="UserMaster\js\jquery.film_roll.js" />
+    <Content Include="UserMaster\js\jquery.flexisel.js" />
+    <Content Include="UserMaster\js\jquery.flexslider.js" />
+    <Content Include="UserMaster\js\lightGallery.js" />
+    <Content Include="UserMaster\js\move-top.js" />
+    <Content Include="UserMaster\js\waypoints.min.js" />
+    <Content Include="UserMaster\UserHome.aspx" />
+    <Content Include="UserMaster\ChildRegister.aspx" />
+    <Content Include="UserMaster\Staff.aspx" />
+    <Content Include="UserMaster\Camp.aspx" />
+    <Content Include="UserMaster\Sponser.aspx" />
+    <Content Include="UserMaster\WholeInformation.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminPanel\AdminMaster.Master.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AdminMaster.Master.designer.cs">
+      <DependentUpon>AdminMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\UserData.aspx.cs">
+      <DependentUpon>UserData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\UserData.aspx.designer.cs">
+      <DependentUpon>UserData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddWhole.aspx.cs">
+      <DependentUpon>AddWhole.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddWhole.aspx.designer.cs">
+      <DependentUpon>AddWhole.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddCamp.aspx.cs">
+      <DependentUpon>AddCamp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddCamp.aspx.designer.cs">
+      <DependentUpon>AddCamp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\Feedback.aspx.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\Feedback.aspx.designer.cs">
+      <DependentUpon>Feedback.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\AddStaff.aspx.cs">
+      <DependentUpon>AddStaff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\AddStaff.aspx.designer.cs">
+      <DependentUpon>AddStaff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\SponserData.aspx.cs">
+      <DependentUpon>SponserData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\SponserData.aspx.designer.cs">
+      <DependentUpon>SponserData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminPanel\OrphaneChild.aspx.cs">
+      <DependentUpon>OrphaneChild.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminPanel\OrphaneChild.aspx.designer.cs">
+      <DependentUpon>OrphaneChild.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\MainMaster.Master.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\MainMaster.Master.designer.cs">
+      <DependentUpon>MainMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\Services.aspx.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\Services.aspx.designer.cs">
+      <DependentUpon>Services.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\Gallery.aspx.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\Gallery.aspx.designer.cs">
+      <DependentUpon>Gallery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\Event.aspx.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\Event.aspx.designer.cs">
+      <DependentUpon>Event.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MainMaster\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MainMaster\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserMaster\UsreMaster.Master.cs">
+      <DependentUpon>UsreMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster\UsreMaster.Master.designer.cs">
+      <DependentUpon>UsreMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster\UserHome.aspx.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster\UserHome.aspx.designer.cs">
+      <DependentUpon>UserHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster\ChildRegister.aspx.cs">
+      <DependentUpon>ChildRegister.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster\ChildRegister.aspx.designer.cs">
+      <DependentUpon>ChildRegister.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster\Staff.aspx.cs">
+      <DependentUpon>Staff.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster\Staff.aspx.designer.cs">
+      <DependentUpon>Staff.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster\Camp.aspx.cs">
+      <DependentUpon>Camp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster\Camp.aspx.designer.cs">
+      <DependentUpon>Camp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster\Sponser.aspx.cs">
+      <DependentUpon>Sponser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster\Sponser.aspx.designer.cs">
+      <DependentUpon>Sponser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserMaster\WholeInformation.aspx.cs">
+      <DependentUpon>WholeInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserMaster\WholeInformation.aspx.designer.cs">
+      <DependentUpon>WholeInformation.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MainMaster\MainMaster.Master" />
+    <Content Include="MainMaster\fonts\fontawesome-webfont.eot" />
+    <Content Include="MainMaster\fonts\fontawesome-webfont.ttf" />
+    <Content Include="MainMaster\fonts\fontawesome-webfont.woff" />
+    <Content Include="MainMaster\fonts\fontawesome-webfont.woff2" />
+    <Content Include="MainMaster\fonts\FontAwesome.otf" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont.eot" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont.ttf" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont.woff" />
+    <Content Include="AdminPanel\fonts\fontawesome-webfont.woff2" />
+    <Content Include="AdminPanel\fonts\FontAwesome.otf" />
+    <Content Include="AdminPanel\AdminMaster.Master" />
+    <None Include="packages.config" />
+    <Content Include="UserMaster\fonts\fontawesome-webfont.eot" />
+    <Content Include="UserMaster\fonts\fontawesome-webfont.ttf" />
+    <Content Include="UserMaster\fonts\fontawesome-webfont.woff" />
+    <Content Include="UserMaster\fonts\fontawesome-webfont.woff2" />
+    <Content Include="UserMaster\fonts\FontAwesome.otf" />
+    <Content Include="UserMaster\UsreMaster.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="img1\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>65282</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44370/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
